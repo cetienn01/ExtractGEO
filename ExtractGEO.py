@@ -25,8 +25,24 @@ from tqdm import tqdm
 
 #gse_number = {}
 
+class geo_record(object):
+    def __init__(self, series, sample, platform):
+        """Return a geo_record object whose series [GEO accession number (GSExxx)] is *series*,
+        samples [GEO accession number (GSMxxx)] are *samples*, and platform [GEO accession number (GPLxxx)] is *platform*."""
+        self.series = series
+        self.sample = sample
+        self.platform = platform
+        
+ class geo_dataset(object):
+    def __init__(self, gds):
+    """ Return a [curated] geo_data set whose GEO Dataset records (GDSxxx) 'gds' is *gds* """
+    self.gds = gds
+  
+class geo_datatype(object):
+    def __init__(self, microarray, ngs, functional_genomics):
+        
 # Makes a function that will contain the desired program.
-def get_filename_fromGEO():
+def get_filename_fromGEO(self, series):
     """
     Get filename using GEO accession number
     """
