@@ -19,9 +19,11 @@ import os
 from os import path
 from tqdm import tqdm
 
-#Download files from the GEO database using GSE accession numbers
-#A GSE (or a Series) is an original submitter-supplied record
+#Download files from the GEO database using any GEO accession numbers (GSE, GSM, GPL, or GDS)
+# A GEO Series record is an original submitter-supplied record that summarizes an experiment.
+## A GSE (or a Series) is an original submitter-supplied record
 #that summarizes whole study including samples and platforms
+# https://www.ncbi.nlm.nih.gov/geo/info/overview.html
 
 #gse_number = {}
 
@@ -59,7 +61,17 @@ def get_GEO_files(self, series, sample, platform, dataset):
          
          try:
              geo_access_num = input("Enter the GEO accession number here: ")
-            # (1) create an empty list to store all the files (or filepath) to be downloaded
+             # geo={}.geo_access_num, destdir=output_dir
+             
+         # If something else that is not a GSE number is introduced, the ValueError exception will be called
+         except ValueError:
+             # The cycle will go on until validation
+             print("Error! This GEO accession number is invalid. \n Please enter a valid GEO accession number to continue" )
+             
+         # When a valid GSE number is entered successfully, the loop will end.
+         else:
+                print(only one GEO accession number was provided)
+                 # (1) create an empty list to store all the files (or filepath) to be downloaded
             temp_list = list()
             # (2) create a for loop to iterate over all the GEO accession numbers entered by the user
             for i in geo_access_num:
@@ -68,22 +80,13 @@ def get_GEO_files(self, series, sample, platform, dataset):
                 elif
                 ese
                 dataset = GEOparse.get_GEO(geo=geo_access_num, destdir=output_dir)
-             # geo={}.geo_access_num, destdir=output_dir
-             
-         # If something else that is not a GSE number is introduced, the ValueError exception will be called
-         except ValueError:
-             # The cycle will go on until validation
-             print("Error! This GEO number is invalid. \n Please enter a valid GEO (series) accession number to continue" )
-             
-         # When a valid GSE number is entered successfully, the loop will end.
-         else:
              # ask user to create a folder name
-             # This input will be used to create a new folder to store files in (if folder does not already exist)
+             # This 'folde name' input will be used to create a new folder to store files in (if folder does not already exist)
              print("Where would you like to save these files? ")
 
              try: 
                  # An input is requested and stored in a variable
-                 folder_name = input("Enter a project name: ")
+                 folder_name = input("Enter a project or folder name: ")
                  
              except SyntaxError:
                  folder_name = None
