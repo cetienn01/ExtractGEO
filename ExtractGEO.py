@@ -28,10 +28,34 @@ from tqdm import tqdm
 #gse_number = {}
 
 class geo_record(object):
-    def __init__(self, series, sample, platform, dataset):
-        """Return a geo_record object whose: series [GEO accession number (GSExxx)] is *series*,
+        """
+        Return a geo_record object whose: series [GEO accession number (GSExxx)] is *series*,
         sample [GEO accession number (GSMxxx)] is *sample*, platform [GEO accession number (GPLxxx)] is *platform*,
-        and dataset [GEO Dataset records (GDSxxx) is *dataset*]."""
+        and dataset [GEO Dataset records (GDSxxx) is *dataset*].
+        
+        :param series: 
+        :type series:
+        :param sample:
+        :type sample:
+        :param platform:
+        :type platform:
+        :param dataset: 
+        :type dataset:
+        """
+        
+     def __init__(self, series, sample, platform, dataset):
+        """ 
+        The constructor for geo_record class
+        :param series: 
+        :type series:
+        :param sample:
+        :type sample:
+        :param platform:
+        :type platform:
+        :param dataset: 
+        :type dataset:
+        """
+        
         self.series = series
         self.sample = sample
         self.platform = platform
