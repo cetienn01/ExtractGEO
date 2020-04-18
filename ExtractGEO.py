@@ -34,12 +34,18 @@ class geo_record(object):
         self.sample = sample
         self.platform = platform
         self.dataset = dataset
-  
+
+"""
+Commenting this out for now.
+need to look at the type of data that is stored in the GEO database a little bit more
+
 class geo_datatype(object):
     def __init__(self, microarray, ngs, functional_genomics):
-        
+    
+"""
+
 # Makes a function that will contain the desired program.
-def get_file_fromGEO(self, series, sample, platform, dataset):
+def get_GEO_files(self, series, sample, platform, dataset):
     """
     Get filename using GEO accession number (either 'series', 'sample', 'platform', or 'dataset')
     """
@@ -48,11 +54,20 @@ def get_file_fromGEO(self, series, sample, platform, dataset):
     while True:
          print()
          print("What is the GEO accession number for the dataset you would like to download?" \n
-               "You can use either Series (e.g.: GSE1563), Sample (e.g.: GSM906), Platform (e.g.: GPL2020), or Dataset (e.g.: GDS1563)")
+               "You can use either Series (e.g.: GSE1563), Sample (e.g.: GSM906), Platform (e.g.: GPL2020), or Dataset (e.g.: GDS1563)") \n
+               "If you would like to download multiple files at once, simply separate each GEO accession number with a comma (e.g.: GSE1563, GSM906, etc)"
          
          try:
              geo_access_num = input("Enter the GEO accession number here: ")
-             dataset = GEOparse.get_GEO(geo=geo_access_num, destdir=output_dir)
+            # (1) create an empty list to store all the files (or filepath) to be downloaded
+            temp_list = list()
+            # (2) create a for loop to iterate over all the GEO accession numbers entered by the user
+            for i in geo_access_num:
+                if series = "GSE"
+                elif series = none 
+                elif
+                ese
+                dataset = GEOparse.get_GEO(geo=geo_access_num, destdir=output_dir)
              # geo={}.geo_access_num, destdir=output_dir
              
          # If something else that is not a GSE number is introduced, the ValueError exception will be called
@@ -109,5 +124,5 @@ def get_file_fromGEO(self, series, sample, platform, dataset):
                      print "Download is Complete!)
                      print("Go to the %s folder to view the downloaded dataset", % file_name)
                      break
-                    if __name__== "__main__":
-                        main()
+ if __name__== "__main__":
+    main()
