@@ -63,6 +63,8 @@ def get_GEO_files(self, series, sample, platform, dataset):
              geo_access_num = input("Enter the GEO accession number here: ")
              # geo={}.geo_access_num, destdir=output_dir
              
+            #check that the GEO accession number entered by the uder is valid
+            
          # If something else that is not a GSE number is introduced, the ValueError exception will be called
          except ValueError:
              # The cycle will go on until validation
