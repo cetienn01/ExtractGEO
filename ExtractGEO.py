@@ -26,35 +26,32 @@ from tqdm import tqdm
 #gse_number = {}
 
 class geo_record(object):
-    def __init__(self, series, sample, platform):
-        """Return a geo_record object whose series [GEO accession number (GSExxx)] is *series*,
-        sample [GEO accession number (GSMxxx)] is *sample*, and platform [GEO accession number (GPLxxx)] is *platform*."""
+    def __init__(self, series, sample, platform, dataset):
+        """Return a geo_record object whose: series [GEO accession number (GSExxx)] is *series*,
+        sample [GEO accession number (GSMxxx)] is *sample*, platform [GEO accession number (GPLxxx)] is *platform*,
+        and dataset [GEO Dataset records (GDSxxx) is *dataset*]."""
         self.series = series
         self.sample = sample
         self.platform = platform
-        
- class geo_dataset(object):
-    def __init__(self, gds):
-    """ Return a [curated] geo_data set whose GEO Dataset records (GDSxxx) 'gds' is *gds* """
-    self.gds = gds
+        self.dataset = dataset
   
 class geo_datatype(object):
     def __init__(self, microarray, ngs, functional_genomics):
         
 # Makes a function that will contain the desired program.
-def get_file_fromGEO(self, series, sample, platform):
+def get_file_fromGEO(self, series, sample, platform, dataset):
     """
-    Get filename using GEO accession number (either 'series', 'sample', or 'platform')
+    Get filename using GEO accession number (either 'series', 'sample', 'platform', or 'dataset')
     """
     # Create a loop until the user enter a valid GEO accession number
     # Calls for an infinite loop that keeps executing until an exception occurs
     while True:
          print()
          print("What is the GEO accession number for the dataset you would like to download?" \n
-               "You can use either Series (e.g.: GSE1563), Sample (e.g.: GSM906), or Platform (e.g.: GPL2020)")
+               "You can use either Series (e.g.: GSE1563), Sample (e.g.: GSM906), Platform (e.g.: GPL2020), or Dataset (e.g.: GDS1563)")
          
          try:
-             geo_access_num = input("Enter GSE number here: ")
+             geo_access_num = input("Enter the GEO accession number here: ")
              dataset = GEOparse.get_GEO(geo=geo_access_num, destdir=output_dir)
              # geo={}.geo_access_num, destdir=output_dir
              
