@@ -33,13 +33,13 @@ class geo_record(object):
         sample [GEO accession number (GSMxxx)] is *sample*, platform [GEO accession number (GPLxxx)] is *platform*,
         and dataset [GEO Dataset records (GDSxxx) is *dataset*].
         
-        :param series: 
+        :param series: str -- GEO accession number (GSExxx)
         :type series:
-        :param sample:
+        :param sample: str -- GEO accession number (GSMxxx)
         :type sample:
-        :param platform:
+        :param platform: str -- GEO accession number (GPLxxx)
         :type platform:
-        :param dataset: 
+        :param dataset: str -- GEO Dataset records (GDSxxx)
         :type dataset:
         """
         
