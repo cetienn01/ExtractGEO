@@ -28,7 +28,7 @@ from tqdm import tqdm
 class geo_record(object):
     def __init__(self, series, sample, platform):
         """Return a geo_record object whose series [GEO accession number (GSExxx)] is *series*,
-        samples [GEO accession number (GSMxxx)] are *samples*, and platform [GEO accession number (GPLxxx)] is *platform*."""
+        sample [GEO accession number (GSMxxx)] is *sample*, and platform [GEO accession number (GPLxxx)] is *platform*."""
         self.series = series
         self.sample = sample
         self.platform = platform
@@ -42,15 +42,16 @@ class geo_datatype(object):
     def __init__(self, microarray, ngs, functional_genomics):
         
 # Makes a function that will contain the desired program.
-def get_filename_fromGEO(self, series):
+def get_file_fromGEO(self, series, sample, platform):
     """
-    Get filename using GEO accession number
+    Get filename using GEO accession number (either 'series', 'sample', or 'platform')
     """
     # Create a loop until the user enter a valid GEO accession number
     # Calls for an infinite loop that keeps executing until an exception occurs
     while True:
          print()
-         print("What is the GEO (series) accession number for the dataset you would like to download? \n (e.g.: GSE1563)")
+         print("What is the GEO accession number for the dataset you would like to download?" \n
+               "You can use either Series (e.g.: GSE1563), Sample (e.g.: GSM906), or Platform (e.g.: GPL2020)")
          
          try:
              geo_access_num = input("Enter GSE number here: ")
