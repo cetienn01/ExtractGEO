@@ -87,10 +87,19 @@ def get_GEO_files(self, series, sample, platform, dataset):
              geo_access_num = [str(geo_access_num) for geo_access_num in input("Enter the GEO accession number here: ").split(",")]
              break
              # geo={}.geo_access_num, destdir=output_dir
-             
-                #another option is to create an empty list -> then take the user inputs and store them in that empty list
-# see below for details...will come back to this in few min. I want to find the best, faster, easiest, and cleanest way to do this
-
+        
+        #another option is to
+        # (1) ask the user for inputs -> (2) create an empty list to store these values ->
+        # (3) loop through all the inputs entered by the user -> (4) and store these inputs in that 'empty' list
+        # see below for details...
+        """
+        geo_access_num = input("Enter the GEO accession number here: ").split(",")
+        temp_list = []
+        for i in geo_access_num:
+            temp_list.append(i)
+        print("You entered the following GEO accession numbers: " + str(temp_list)[1:-1])
+        print("The total number of GEO accession numbers provided is: ", len(temp_list)
+         """
             #check that the GEO accession number entered by the uder is valid
             
          # If something else that is not a GEO accession number is introduced, the ValueError exception will be called
@@ -100,22 +109,11 @@ def get_GEO_files(self, series, sample, platform, dataset):
              
          # When a valid GEO accession number is entered successfully, the loop will end.
          else:
-                 # (1) read all the GEO accession numbers provided by the user (and remove the square brackets from the output of the list)
-                          print("You entered the following GEO accession numbers: " + str(geo_access_num))[1:-1]
-                                
-                 # (2) create an empty list to store all the files (or filepath(s)) to be downloaded
-                ## note to self: may have to remove this bit of code, as the user inputs are already stored in a list above.
-            temp_list = list()
-        for i in geo_access_num:
-        temp_list.append(geo_access_num)
-         print("A total of %d GEO accession number was provided" % len(temp_list))
-                 print("You entered the following GEO accession numbers: ", temp_list)
-                
-                
-        # (2) create a loop to iterate over the user input and add items to the empty list and count all the number of GEO accession number provided by the user
-         for in in geo_access_num:
-                print("A total of %d GEO accession number was provided" % len(temp_list))
-                
+                 # (1) print all the GEO accession numbers provided by the user (and remove the square brackets from the output of the list)
+                     print("You entered the following GEO accession numbers: " + str(geo_access_num)[1:-1])
+                 # (2) print the total number of inputs provided by the user
+                     print("A total of %d GEO accession number was provided" % len(temp_list))
+                      
         # if one or more of the GEO accession number is invalid, throw a warning, reject those entries and proceed to download only the valid GEO accession numbers
         # first, check the list to see if all inputs are valid, if not, find the ones that are invalid and...
         # (1) remove them from the original list and (2) store into a separate list
