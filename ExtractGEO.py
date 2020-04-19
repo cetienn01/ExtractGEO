@@ -85,16 +85,17 @@ def get_GEO_files(self, series, sample, platform, dataset):
          
          try:
              geo_access_num = input("Enter the GEO accession number here: ")
+             break
              # geo={}.geo_access_num, destdir=output_dir
              
             #check that the GEO accession number entered by the uder is valid
             
-         # If something else that is not a GSE number is introduced, the ValueError exception will be called
+         # If something else that is not a GEO accession number is introduced, the ValueError exception will be called
          except ValueError:
              # The cycle will go on until validation
              print("Error! This GEO accession number is invalid. \n Please enter a valid GEO accession number to continue" )
              
-         # When a valid GSE number is entered successfully, the loop will end.
+         # When a valid GEO accession number is entered successfully, the loop will end.
          else:
                  # (1) create an empty list to store all the files (or filepath(s)) to be downloaded
             temp_list = list()
