@@ -84,7 +84,7 @@ def get_GEO_files(self, series, sample, platform, dataset):
                "If you would like to download multiple files at once, simply separate each GEO accession number with a comma (e.g.: GSE1563, GSM906, etc)"
          
          try:
-             geo_access_num = input("Enter the GEO accession number here: ")
+             geo_access_num = [str(geo_access_num) for geo_access_num in input("Enter the GEO accession number here: ").split(",")]
              break
              # geo={}.geo_access_num, destdir=output_dir
              
@@ -97,16 +97,24 @@ def get_GEO_files(self, series, sample, platform, dataset):
              
          # When a valid GEO accession number is entered successfully, the loop will end.
          else:
-                 # (1) create an empty list to store all the files (or filepath(s)) to be downloaded
+                 # (1) read all the GEO accession numbers provided by the user
+                          print("You entered the following GEO accession numbers: ", geo_access_num)
+                                
+                 # (2) create an empty list to store all the files (or filepath(s)) to be downloaded
+                ## note to self: may have to remove this bit of code, as the user inputs are already stored in a list above.
             temp_list = list()
         
         # (2) create a loop to iterate over and count all the number of GEO accession number provided by the user
          for in in geo_access_num:
                    temp_list.append(geo_access_num)
-                print(%d "GEO accession number was provided" % len(temp_list))
+                print("A total of %d GEO accession number was provided" % len(temp_list))
                 
-        # if one or more of the GEO accession number is invalid, throw an error, reject that entry and proceed to download only the valid GEO accession numbers
+        # if one or more of the GEO accession number is invalid, throw an error, reject those entries and proceed to download only the valid GEO accession numbers
+        # first, check the list to see if all inputs are valid, if not, find the ones that are invalid and...
+        # (1) remove them from the original list and (2) store into a separate list
         
+        print("The following GEO accession numbers are invalid: %s, \n and will be ignored" % )
+        print("only the these GEO accession numbers will be downloaded")
         
         
         
