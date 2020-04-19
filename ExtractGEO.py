@@ -88,6 +88,9 @@ def get_GEO_files(self, series, sample, platform, dataset):
              break
              # geo={}.geo_access_num, destdir=output_dir
              
+                #another option is to create an empty list -> then take the user inputs and store them in that empty list
+# see below for details...will come back to this in few min. I want to find the best, faster, easiest, and cleanest way to do this
+
             #check that the GEO accession number entered by the uder is valid
             
          # If something else that is not a GEO accession number is introduced, the ValueError exception will be called
@@ -106,7 +109,6 @@ def get_GEO_files(self, series, sample, platform, dataset):
         
         # (2) create a loop to iterate over and count all the number of GEO accession number provided by the user
          for in in geo_access_num:
-                   temp_list.append(geo_access_num) # might also remove the append because no need to add to the list again
                 print("A total of %d GEO accession number was provided" % len(temp_list))
                 
         # if one or more of the GEO accession number is invalid, throw a warning, reject those entries and proceed to download only the valid GEO accession numbers
