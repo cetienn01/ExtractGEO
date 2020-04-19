@@ -103,7 +103,7 @@ def get_GEO_files(self, series, sample, platform, dataset):
         # (2) create a loop to iterate over and count all the number of GEO accession number provided by the user
          for in in geo_access_num:
                    temp_list.append(geo_access_num)
-                print(%s "GEO accession number was provided") %len(temp_list)
+                print(%d "GEO accession number was provided" % len(temp_list))
                 
         # if one or more of the GEO accession number is invalid, throw an error, reject that entry and proceed to download only the valid GEO accession numbers
         
@@ -156,7 +156,7 @@ def get_GEO_files(self, series, sample, platform, dataset):
                      output_dir = os.path.dirname(folder_name_str_dir)
 
          # Download files/dataset
-         print("Downloading %s dataset into %s folder", % dataset, % output_dir)
+         print("Downloading %s dataset into %s folder", % (dataset, output_dir))
          return dataset
          
                      print("Please wait...")
