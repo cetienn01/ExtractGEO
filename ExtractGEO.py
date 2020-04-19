@@ -106,10 +106,10 @@ def get_GEO_files(self, series, sample, platform, dataset):
         
         # (2) create a loop to iterate over and count all the number of GEO accession number provided by the user
          for in in geo_access_num:
-                   temp_list.append(geo_access_num)
+                   temp_list.append(geo_access_num) # might also remove the append because no need to add to the list again
                 print("A total of %d GEO accession number was provided" % len(temp_list))
                 
-        # if one or more of the GEO accession number is invalid, throw an error, reject those entries and proceed to download only the valid GEO accession numbers
+        # if one or more of the GEO accession number is invalid, throw a warning, reject those entries and proceed to download only the valid GEO accession numbers
         # first, check the list to see if all inputs are valid, if not, find the ones that are invalid and...
         # (1) remove them from the original list and (2) store into a separate list
         
