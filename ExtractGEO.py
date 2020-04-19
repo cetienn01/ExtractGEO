@@ -79,10 +79,11 @@ def get_GEO_files(self, series, sample, platform, dataset):
     # Calls for an infinite loop that keeps executing until an exception occurs
     while True:
          print()
-         print("What is the GEO accession number for the dataset you would like to download?" \n
-               "You can use either Series (e.g.: GSE1563), Sample (e.g.: GSM906), Platform (e.g.: GPL2020), or Dataset (e.g.: GDS1563)") \n
-               "If you would like to download multiple files at once, simply separate each GEO accession number with a comma (e.g.: GSE1563, GSM906, etc)"
-         
+         print("What is the GEO accession number for the dataset you would like to download?")
+         print("You can use either Series (e.g.: GSE1563), Sample (e.g.: GSM906), Platform (e.g.: GPL2020), or Dataset (e.g.: GDS1563)")
+         print("If you would like to download multiple files at once, simply separate each GEO accession number with a comma (e.g.: GSE1563, GSM906, etc)")
+         else:
+        
          try:
              geo_access_num = [str(geo_access_num) for geo_access_num in input("Enter the GEO accession number here: ").split(",")]
              break
