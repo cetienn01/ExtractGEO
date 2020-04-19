@@ -96,10 +96,20 @@ def get_GEO_files(self, series, sample, platform, dataset):
              
          # When a valid GSE number is entered successfully, the loop will end.
          else:
-                print(only one GEO accession number was provided)
-                 # (1) create an empty list to store all the files (or filepath) to be downloaded
+                 # (1) create an empty list to store all the files (or filepath(s)) to be downloaded
             temp_list = list()
-            # (2) create a for loop to iterate over all the GEO accession numbers entered by the user
+        
+        # (2) create a loop to iterate over and count all the number of GEO accession number provided by the user
+         for in in geo_access_num:
+                   temp_list.append(geo_access_num)
+                print(%s "GEO accession number was provided") %len(temp_list)
+                
+        # if one or more of the GEO accession number is invalid, throw an error, reject that entry and proceed to download only the valid GEO accession numbers
+        
+        
+        
+        
+        # prepare files for processing
             for i in geo_access_num:
                 if series = "GSE"
                 elif series = none 
@@ -125,7 +135,7 @@ def get_GEO_files(self, series, sample, platform, dataset):
                  else :
                      # Converts the user input into a string
                      folder_name_str = str(folder_name)
-                     print("The project name you entered is: %s ") % folder_name_str
+                     print("The project name you entered is": %s) % folder_name_str
                      
              # (2) Check to see if [output directory] folder is an existing directory
              else:
