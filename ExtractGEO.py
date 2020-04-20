@@ -82,8 +82,6 @@ def get_GEO_files(self, series, sample, platform, dataset):
          print("What is the GEO accession number for the dataset you would like to download?")
          print("You can use either Series (e.g.: GSE1563), Sample (e.g.: GSM906), Platform (e.g.: GPL2020), or Dataset (e.g.: GDS1563)")
          print("If you would like to download multiple files at once, simply separate each GEO accession number with a comma (e.g.: GSE1563, GSM906, etc)")
-         else:
-        
          try:
              geo_access_num = [str(geo_access_num) for geo_access_num in input("Enter the GEO accession number here: ").split(",")]
              break
@@ -113,23 +111,24 @@ def get_GEO_files(self, series, sample, platform, dataset):
         # (2) if one or more of the GEO accession number is invalid, throw a warning, reject those entries and proceed to download only the valid GEO accession numbers
         ## do this by: [first] remove the invalid inputs from the original list, [second] store the invalid inputs into a separate list,
         ## [third] download only the valid input from the original list
+        for geo in geo_access_num
+                if geo in Geo_type #need to add a valid statement here (this is just for place holder right now
+                   print("only some of these GEO accession numbers are valid")
+                   print("The following GEO accession numbers are invalid: %s, \n and will be ignored" % )
+                   print("therefore only the followng GEO accession numbers will be downloaded")
         # (3) if all inputs are valid, proceed to download all
-                    
+                else:
+            
          # If something else that is not a GEO accession number is introduced, the ValueError exception will be called
          except ValueError:
              # The cycle will go on until validation
              print("Error! This GEO accession number is invalid. \n Please enter a valid GEO accession number to continue" )
              
          # When a valid GEO accession number is entered successfully, the loop will end.
-         else:
-        print("The following GEO accession numbers are invalid: %s, \n and will be ignored" % )
-        print("only the these GEO accession numbers will be downloaded")
-        
-        
         
         # prepare files for processing
             for i in geo_access_num:
-                if series = "GSE"
+                if i series = "GSE"
                 elif series = none 
                 elif
                 ese
