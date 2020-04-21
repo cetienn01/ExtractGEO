@@ -112,12 +112,17 @@ def get_GEO_files(self, series, sample, platform, dataset):
         ## do this by: [first] remove the invalid inputs from the original list, [second] store the invalid inputs into a separate list,
         ## [third] download only the valid input from the original list
         for geo in geo_access_num
+                if geo_access_num == # neeed to write code that match either series, sample, platform dataset
+                print("all the inputs are valid GEO accession numbers")
+                else:
+                        break
+                        
                 if geo in Geo_type #need to add a valid statement here (this is just for place holder right now
                    print("only some of these GEO accession numbers are valid")
                    print("The following GEO accession numbers are invalid: %s, \n and will be ignored" % )
                    print("therefore only the followng GEO accession numbers will be downloaded")
         # (3) if all inputs are valid, proceed to download all
-                else:
+               break
             
          # If something else that is not a GEO accession number is introduced, the ValueError exception will be called
          except ValueError:
