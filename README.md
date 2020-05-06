@@ -7,6 +7,7 @@ The GEO database contains publicly available high-throughput functional genomics
 
 ### Quick Links
 - [About](#about)
+- [Technologies](#technologies)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -20,6 +21,11 @@ The GEO database contains publicly available high-throughput functional genomics
 
 ### About
 
+### Technologies
+This project is created with:
+- Python3
+- GEOparse
+-
 
 ### Getting Started
 
