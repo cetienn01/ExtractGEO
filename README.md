@@ -7,10 +7,16 @@ The GEO database contains publicly available high-throughput functional genomics
 
 ### Quick Links
 - About
-- Installation
+- Getting Started
+  - Prerequisites
+  - Installation
 - Usage
 - Demo
-- 
+- Contributing
+- Version
+- Authors
+- License
+- Acknowledgments
 
 
 ### Installation
