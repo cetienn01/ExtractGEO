@@ -9,3 +9,17 @@ This data retriever takes inputs from the end user and helps the user query and 
 - Usage
 - Demo
 - 
+
+
+### Installation
+
+If you have Python installed, use `pip` from the terminal or a package manager such as `conda`:
+
+1. Method 1: install using **pip** \
+`pip install ExtractGEO`
+
+2. Method 2: install using **conda**: \
+`conda install ExtractGEO -c conda-forge`
+
+**NOTE:**
+- If you don’t have Python installed we recommend installing it using the `Anaconda installer` then running the conda install command above. _When installing Anaconda through the installer, make sure that the ‘add to PATH’ option is checked._
