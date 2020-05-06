@@ -34,7 +34,9 @@ This project is created with:
 
 **METHOD 1**
 
-If you have Python installed, use `pip` from the terminal or a package manager such as `conda`:
+You can install the module by running `python setup.py install`
+
+If you have **Python** installed, use `pip` from the terminal or a package manager such as `conda`:
 
 1. Option 1: install using **pip** \
 `pip install ExtractGEO`
@@ -42,11 +44,12 @@ If you have Python installed, use `pip` from the terminal or a package manager s
 2. Option 2: install using **conda**: \
 `conda install ExtractGEO -c conda-forge`
 
-**NOTE:**
-- If you don’t have Python installed we recommend installing it using the `Anaconda installer` then running the conda install command above. _When installing Anaconda through the installer, make sure that the ‘add to PATH’ option is checked._
+##### NOTE:
+- If you don’t have Python installed we recommend installing it using the `Anaconda installer` then running the conda install command above.
+  - _When installing Anaconda through the installer, make sure that the ‘add to PATH’ option is checked._
 
 
-**METHOD 2**
+**METHOD 2** From Source
 
 If you want to use the current development version of the software either use `pip` to install directly from **GitHub**:
 
@@ -56,6 +59,9 @@ If you want to use the current development version of the software either use `p
 2. Option 2: Clone the repository \
 `cd` into the repository directory and run `pip install`.
 (you may need to include sudo at the beginning of the command depending on your system).
+
+3. Option 3: Using **Git**
+`pip install git+https://github.com/cetienn01/extractGEO`
 
 ### Usage
 
