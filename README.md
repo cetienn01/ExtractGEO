@@ -6,20 +6,25 @@ The `ExtractGEO` package takes inputs from the end-user and makes it easy for th
 The GEO database contains publicly available high-throughput functional genomics data, such as **microarray**, **next-generation sequencing**
 
 ### Quick Links
-- About
-- Getting Started
-  - Prerequisites
-  - Installation
-- Usage
-- Demo
-- Contributing
-- Version
-- Authors
-- License
-- Acknowledgments
+- [About](#about)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Demo](#demo)
+- [Contributing](#contributing)
+- [Version](#version)
+- [Authors](#authors)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+
+### About
 
 
-### Installation
+### Getting Started
+
+#### Prerequisites
+#### Installation
 
 **METHOD 1**
 
@@ -45,3 +50,19 @@ If you want to use the current development version of the software either use `p
 2. Option 2: Clone the repository \
 `cd` into the repository directory and run `pip install`.
 (you may need to include sudo at the beginning of the command depending on your system).
+
+### Usage
+
+### Demo
+
+### Contributing
+
+### Version
+
+### Authors
+
+### License
+
+### Acknowledgments
+
+
