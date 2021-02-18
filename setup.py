@@ -8,16 +8,18 @@ with open("README.md", "r") as fh:
 setup(
     name = 'extractGEO',
     packages = ['extractGEO'],
-    version = '0.1',
+    version = '0.1.0',
     url = 'https://github.com/cetienn01/extractGEO',
     description = 'Python dataset retriever',
     long_description = long_description,
     long_description_content_type = 'text/markdown',
-    author = 'Chris Etienne, Arman Aksoy',
-    author_email = 'cetienn01@gmail.com, arman@aksoy.org',
+    author = 'Chris Etienne', 'Arman Aksoy',
+    author_email = 'cetienn01@gmail.com', 'arman@aksoy.org',
     keywords=['python', 'GEO'],
     license = 'MIT',
     classifiers = [
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',
         'Natural Language :: English',
@@ -26,6 +28,9 @@ setup(
         'Intended Audience :: System Administrators',
         'License :: OSI Approved :: MIT License'
     ],
-    install_requires=['numpy'],
-    scripts = ['scripts/<name-of-script.py>']
+    packages=['extractGEO'],
+    include_package_data = True,
+    install_requires = ['numpy, 'pandas'],
+    scripts = ['scripts/<name-of-script.py>'],
+    entry_points={'console_scripts': ['extractGEO=reader.__main__:main']},
 )
