@@ -22,10 +22,13 @@ The GEO database contains publicly available high-throughput functional genomics
 ### About
 
 ### Technologies
+
+#### Built With
 This project is created with:
-- Python3
-- GEOparse
--
+- [Python3](https://www.python.org/download/releases/3.0/)
+- [GEOparse](https://pypi.org/project/GEOparse/)
+- [CircleCI](https://circleci.com/)
+- [PyInstaller](https://www.pyinstaller.org/)
 
 ### Getting Started
 
@@ -60,20 +63,51 @@ If you want to use the current development version of the software either use `p
 `cd` into the repository directory and run `pip install`.
 (you may need to include sudo at the beginning of the command depending on your system).
 
-3. Option 3: Using **Git**
+3. Option 3: Using **Git** \
 `pip install git+https://github.com/cetienn01/extractGEO`
 
 ### Usage
 
 ### Demo
 
-### Contributing
+### Roadmap
+See the [open issues]() for a list of proposed features (and known issues).
 
-### Version
+### Contributing
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+1. Fork the Project
+2. Create your new feature branch \
+`git checkout -b new_feature`
+3. Add the amazing feature [that you've created] \
+`git add .`
+5. Commit your Changes \
+`git commit -m 'added an amazing feature'`
+5. Push to the Branch \
+`git push origin new_feature/AmazingFeature`
+6. Open a Pull Request
+
+Please read [CONTRIBUTING.md]() for details on our code of conduct, and the process for submitting pull requests to us.
+
+### Versioning
 
 ### Authors
 
+- **Chris Etienne** - _initial work_
+  - twitter: [@iamchrisetienne](https://twitter.com/iamchrisetienne)
+  - email: cetienn01@gmail.com
+- **Arman Aksoy**
+  - twitter: [armish](https://twitter.com/armish)
+  - email: 
+
+See also the list of [contributors]() who participated in this project.
+
+**`Project Link`** : https://github.com/cetienn01/ExtractGEO
+
+
 ### License
+This project is licensed and distributed under the MIT License. See [LICENSE](https://github.com/cetienn01/ExtractGEO/blob/master/LICENSE) file for more information.
+
 
 ### Acknowledgments
 
