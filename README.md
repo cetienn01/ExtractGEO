@@ -88,7 +88,7 @@ Contributions are what make the open source community such an amazing place to b
 `git push origin new_feature/AmazingFeature`
 6. Open a Pull Request
 
-Please read [CONTRIBUTING.md]() for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/cetienn01/ExtractGEO/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
