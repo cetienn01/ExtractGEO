@@ -33,4 +33,5 @@ setup(
     install_requires = ['numpy, 'pandas'],
     scripts = ['scripts/<name-of-script.py>'],
     entry_points={'console_scripts': ['extractGEO=reader.__main__:main']},
+    
 )
