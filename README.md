@@ -1,11 +1,11 @@
-## ExtractGEO
+# ExtractGEO
 ### This is an interactive python-based datasets retriever for the GEO database
 
 This data retriever offers a very straightforward and user-friendly way to access GEO data.\
 The `ExtractGEO` package takes inputs from the end-user and makes it easy for the user to query and download data from the [Gene Expression Omnibus (GEO)](https://www.ncbi.nlm.nih.gov/geo/) database.\
 The GEO database contains publicly available high-throughput functional genomics data, such as **microarray**, **next-generation sequencing**
 
-### Quick Links
+## Quick Links
 - [About](#about)
 - [Technologies](#technologies)
 - [Getting Started](#getting-started)
@@ -13,15 +13,16 @@ The GEO database contains publicly available high-throughput functional genomics
   - [Installation](#installation)
 - [Usage](#usage)
 - [Demo](#demo)
+- [Roadmap](#roadmap)
 - [Contributing](#contributing)
-- [Version](#version)
+- [Versioning](#version)
 - [Authors](#authors)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 
-### About
+## About
 
-### Technologies
+## Technologies
 
 #### Built With
 This project is created with:
@@ -30,7 +31,7 @@ This project is created with:
 - [CircleCI](https://circleci.com/)
 - [PyInstaller](https://www.pyinstaller.org/)
 
-### Getting Started
+## Getting Started
 
 #### Prerequisites
 #### Installation
@@ -66,14 +67,14 @@ If you want to use the current development version of the software either use `p
 3. Option 3: Using **Git** \
 `pip install git+https://github.com/cetienn01/extractGEO`
 
-### Usage
+## Usage
 
-### Demo
+## Demo
 
-### Roadmap
+## Roadmap
 See the [open issues]() for a list of proposed features (and known issues).
 
-### Contributing
+## Contributing
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
 
 1. Fork the Project
@@ -89,9 +90,9 @@ Contributions are what make the open source community such an amazing place to b
 
 Please read [CONTRIBUTING.md]() for details on our code of conduct, and the process for submitting pull requests to us.
 
-### Versioning
+## Versioning
 
-### Authors
+## Authors
 
 - **Chris Etienne** - _initial work_
   - twitter: [@iamchrisetienne](https://twitter.com/iamchrisetienne)
@@ -105,10 +106,10 @@ See also the list of [contributors]() who participated in this project.
 **`Project Link`** : https://github.com/cetienn01/ExtractGEO
 
 
-### License
+## License
 This project is licensed and distributed under the MIT License. See [LICENSE](https://github.com/cetienn01/ExtractGEO/blob/master/LICENSE) file for more information.
 
 
-### Acknowledgments
+## Acknowledgments
 
 
