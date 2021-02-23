@@ -35,61 +35,61 @@ def get_filename_fromGEO():
     while True:
          print()
          print("What is the GEO (series) accession number for the dataset you would like to download? \n (e.g.: GSE1563)")
-         
+
          try:
              geo_access_num = input("Enter GSE number here: ")
-             dataset = GEOparse.get_GEO(geo=geo_access_num, destdir=output_dir)
+             dataset = GEOparse.get_GEO(geo = geo_access_num, destdir = output_dir)
              # geo={}.geo_access_num, destdir=output_dir
-             
+
          # If something else that is not a GSE number is introduced, the ValueError exception will be called
          except ValueError:
              # The cycle will go on until validation
              print("Error! This GEO number is invalid. \n Please enter a valid GEO (series) accession number to continue" )
-             
+
          # When a valid GSE number is entered successfully, the loop will end.
          else:
              # ask user to create a folder name
              # This input will be used to create a new folder to store files in (if folder does not already exist)
              print("Where would you like to save these files? ")
 
-             try: 
+             try:
                  # An input is requested and stored in a variable
-                 folder_name = input("Enter a project name: ")
-                 
+                 folder_name = input(str("Enter a project name: "))
+
              except SyntaxError:
                  folder_name = None
-                 
+
                  # (1) Test for empty strings
                  if folder_name is None:
                      print("You must choose or create a project folder in order to continue")
-                     folder_name = input("Enter a project name: ")
-                 
+                     folder_name = input(str("Enter a project name: "))
+
                  else :
                      # Converts the user input into a string
                      folder_name_str = str(folder_name)
-                     print("The project name you entered is: %s ") % folder_name_str
-                     
+                     print(f"The project name you entered is: '{folder_name_str}'.")
+
              # (2) Check to see if [output directory] folder is an existing directory
              else:
-                 # confirm that a given path points to a directory                 
+                 # confirm that a given path points to a directory
                  if os.path.isdir(folder_name_str):
-                     print("%s is a directory " % folder_name_str)
+                     print(f"'{folder_name_str}' is a valid directory.")
                      # and use it to store the dataset/files..
                      output_dir = open(folder_name_str, "r+")
                  else:
                      # let the user know this folder/directory does not exist
-                     print("The folder %s could not be found " % folder_name_str)
+                     print(f"The '{folder_name_str}' folder could not be found.")
 
                      # then...automatically create output directory folder using the user input (folder name)
-                     print("A new folder named '%s' will be created to store the files " % folder_name_str)
+                     print(f"A new folder called '{folder_name_str}' will be created to store the files.")
                      #if not os.path.isdir(folder_name_str):
                      os.makedirs(folder_name_str_dir)
                      output_dir = os.path.dirname(folder_name_str_dir)
 
          # Download files/dataset
-         print("Downloading %s dataset into %s folder", % dataset, % output_dir)
+         print(f"Downloading the '{dataset}' dataset into {output_dir} folder.")
          return dataset
-         
+
                      print("Please wait...")
                      for i in tqdm(output_dir)
                      print "Download is Complete!)
