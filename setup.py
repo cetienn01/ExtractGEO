@@ -1,9 +1,14 @@
 #!/usr/bin/env python
 
-from setuptools import setup
+# Purpose = Package and distribution management.
+
+from setuptools import setup, find_packagees
 
 with open("README.md", "r") as fh:
-    long_description = fh.read()
+    readme_long_description = fh.read()
+
+with open('LICENSE') as fh:
+    license_long_description = fh.read()
 
 setup(
     name = 'extractGEO',
@@ -11,12 +16,12 @@ setup(
     version = '0.1.0',
     url = 'https://github.com/cetienn01/extractGEO',
     description = 'Python dataset retriever',
-    long_description = long_description,
+    long_description = readme_long_description,
     long_description_content_type = 'text/markdown',
     author = 'Chris Etienne', 'Arman Aksoy',
     author_email = 'cetienn01@gmail.com', 'arman@aksoy.org',
     keywords=['python', 'GEO'],
-    license = 'MIT',
+    license = license_long_description,
     classifiers = [
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
@@ -28,10 +33,11 @@ setup(
         'Intended Audience :: System Administrators',
         'License :: OSI Approved :: MIT License'
     ],
+    # packages=find_packages(exclude=('tests', 'docs'))
     packages=['extractGEO'],
     include_package_data = True,
     install_requires = ['numpy, 'pandas'],
     scripts = ['scripts/<name-of-script.py>'],
     entry_points={'console_scripts': ['extractGEO=reader.__main__:main']},
-    
+
 )
